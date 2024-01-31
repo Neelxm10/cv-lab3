@@ -35,7 +35,7 @@ axes[0, 0].imshow(imgHSV, cmap='hsv')
 axes[0, 0].set_title('HSV Image')
 
 # Hue Channel
-axes[0, 1].imshow(imgHue, cmap='hsv')
+axes[0, 1].imshow(imgHue, cmap='gray')
 axes[0, 1].set_title('Hue Channel')
 
 # Saturation Channel

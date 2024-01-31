@@ -15,7 +15,16 @@ import random
 
 #Seperate channels Hue (H), Saturation (S), Value (V)
 
+img = cv.imread('leaves.jpg')
+
+cv.imshow("Leaves", img)
+
+imgHSV= cv.cvtColor(img, cv.COLOR_BGR2HSV)
+imgHue = imgHSV[:, :, 0]
+imgSat = imgHSV[:, :, 1]
+imgVal= imgHSV[:, :, 2]
+
+Fenetre= cv.hconcat([imgHSV, imgHue , imgSat , imgVal])
+cv.imshow('HSV Image+ Hue Channel + Saturation Channel'+ 'Value Channel', Fenetre)
 
 
-#Apply masking on the most appropriate image channel (H,S, or V)
-Channel = np.ones(np.array(0,imgChannelSize))
